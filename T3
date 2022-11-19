@@ -1,0 +1,17 @@
+#!/bin/sh
+
+~rbutler/public/courses/pp6330/kj p2
+
+echo
+echo RMB  "   1  24.994446"
+echo RMB  "3234   0.014984"
+echo
+echo RMB  "~6 secs"
+echo
+echo "--------------------------- 2 threads -----------------------------"
+echo
+/usr/bin/time -p  ./p2  1500 3000 100 100 100 400 0.015  2
+echo
+pwd
+echo
+

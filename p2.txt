@@ -1,0 +1,50 @@
+
+                            Parallel Processing
+                                 CSCI 6330
+                                 Fall 2021
+
+
+turnin_code:  pp_p2
+
+
+Write a C program using pthreads to solve the hotplate problem.  The new
+program should conform to the same interface as p1 but will have one
+extra command-line argument, i.e. the number of threads to use.  It will
+continue to print the same values as p1 at each iteration.
+
+To run the program I will type commands like this one:
+
+    ./p2 500 600 100 100 100 400 0.01 8
+
+where the new value 8 represents the number of threads to work on the problem.
+Note that 8 does NOT include the main thread; you will create 8 new threads
+to do the actual work.  The main original thread will merely wait for the
+worker threads to do the work, and then print the results.
+
+The expectation is that, for reasonable-sized problems, the program will
+get near-linear speed-ups as the number of threads increases.  At the end,
+use gettimeofday to print the time spent in the iteration loops *including*
+all synchronization operations; but do not count the time for initialization.
+The one-line message should say this:
+
+    TOTAL TIME 11.45  ## IF 11.45 is the time for all iterations
+
+The original thread should be the one that produces the printed output.
+
+
+Use turnin to submit a tar file containing all of your project files,
+including a makefile that will build the executable program which MUST
+be named p2.
+****
+Use the -Ofast option to gcc when compiling/building your programs.
+****
+****
+Use float instead of double because double can double the execution time.
+****
+
+To build the project, I will cd to my directory containing your files
+and simply type:
+
+    rm -rf p2
+    rm -f *.o
+    make
