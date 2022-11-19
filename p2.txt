@@ -1,11 +1,7 @@
 
                             Parallel Processing
                                  CSCI 6330
-                                 Fall 2021
-
-
-turnin_code:  pp_p2
-
+                    
 
 Write a C program using pthreads to solve the hotplate problem.  The new
 program should conform to the same interface as p1 but will have one
